@@ -2,7 +2,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  name: string;
+  message?: string;
+  revalidated?: boolean;
 };
 
 export default async function handler(
@@ -17,6 +18,6 @@ export default async function handler(
     await res.revalidate("/");
     return res.json({ revalidated: true });
   } catch (err) {
-    return res.status(500).send("Error revalidating");
+    return res.status(500).send({ message: "Error revalidating" });
   }
 }
