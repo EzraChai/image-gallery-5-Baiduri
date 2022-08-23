@@ -37,7 +37,7 @@ function BlurImage({image}: {image: ImageType}){
                             :'grayscale-0 blur-0 scale-100' 
                         )
                     }
-                    src={`/images/${image.username}.jpg`|| "https://instagram.fpku1-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ad=z-m&_nc_ht=instagram.fpku1-2.fna.fbcdn.net&_nc_cat=1&_nc_ohc=EZUdW6JaX6YAX8xGbmQ&edm=AL4D0a4BAAAA&ccb=7-5&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2-ccb7-5&oh=00_AT_5eYDsyG0Fs8Ql4_yt9oopqfcH8CNFbDt1A8EWXREmtw&oe=62E4940F&_nc_sid=712cc3"}
+                    src={image.username ? `/images/${image.username}.jpg`: ""}
                     alt={`${image.name}'s image`} 
                 />
             </div>
