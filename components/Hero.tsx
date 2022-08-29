@@ -8,7 +8,6 @@ export default function Hero() {
       <p className="sub-heading py-8 text-lg lg:text-xl text-gray-600">
         The first and only page that reveal the students&apos; instagram page. If and only if there is.
       </p>
-      <div className=" mt-4 w-100 h-2 bg-yellow-500 rounded-sm"/>
     </div>
   );
 }
