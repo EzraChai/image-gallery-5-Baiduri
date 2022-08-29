@@ -1,5 +1,4 @@
 import { createClient } from '@supabase/supabase-js';
-import Bottom from '../components/Bottom';
 import Gallery from '../components/Gallery';
 import Hero from '../components/Hero';
 
@@ -12,16 +11,11 @@ export type ImageType = {
 }
 
 const Home = ({images} : {images: ImageType[]}) => {
-  
   return (
-    <>
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 overflow-hidden">
       <Hero/>
       <Gallery images={images}/>
     </div>
-    <Bottom/>
-    </>
-
   )
 }
 export default Home;
